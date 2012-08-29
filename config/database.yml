@@ -14,8 +14,8 @@ development:
   reconnect: false
   database: hm_development
   pool: 5
-  username: root
-  password:
+  username: hm
+  password: hm_pwd
   host: localhost
 
 # Warning: The database defined as "test" will be erased and

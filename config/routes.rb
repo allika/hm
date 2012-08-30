@@ -1,6 +1,8 @@
 Hm::Application.routes.draw do
 
   resource :home_page, only: [:show]
+  resources :secure_pages
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

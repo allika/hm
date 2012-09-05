@@ -1,5 +1,7 @@
 Hm::Application.routes.draw do
 
+  devise_for :users
+
   resource :home_page, only: [:show]
   resources :secure_pages
 

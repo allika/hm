@@ -1,4 +1,6 @@
 class SecurePagesController < ApplicationController
-  def show
+  before_filter :authenticate_user!
+
+  def index
   end
 end

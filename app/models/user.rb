@@ -6,6 +6,15 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable, :confirmable
 
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :email, :password, :password_confirmation, :remember_me
+  attr_accessible :email, :password, :password_confirmation, :created_at, :updated_at #, :remember_me
   # attr_accessible :title, :body
+
+  EMAIL_REGEX = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i
+
+  before_save { |user| user.email = email.downcase }
+
+  validates :email, :presence => true, :length => { :maximum => 60 },
+            :format => EMAIL_REGEX, :uniqueness => { :case_sensitive => false }
+  validates :password, :presence => true, :length => { :in => 6..35 }
+  validates :password_confirmation, :presence => true
 end

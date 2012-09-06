@@ -38,6 +38,7 @@ end
 
 group :cucumber do
   gem 'cucumber-rails', :require => false
+  gem 'capybara', :github => 'jnicklas/capybara', :require => false
 end
 
 # To use ActiveModel has_secure_password

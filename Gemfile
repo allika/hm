@@ -36,9 +36,14 @@ group :test, :cucumber do
   gem 'database_cleaner', :require => false
 end
 
+group :test do
+  gem 'email_spec'
+end
+
 group :cucumber do
   gem 'cucumber-rails', :require => false
   gem 'capybara', :github => 'jnicklas/capybara', :require => false
+  gem 'xpath', :github => 'jnicklas/xpath', :require => false
 end
 
 # To use ActiveModel has_secure_password

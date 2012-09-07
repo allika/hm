@@ -38,7 +38,7 @@ production:
   database: hm_production
   pool: 5
   username: root
-  password:
+  password: epyfnm
   host: localhost
 
 cucumber:

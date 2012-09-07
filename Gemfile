@@ -23,6 +23,8 @@ end
 group :development do
   gem 'mongrel', '>= 1.2.0.pre2'
   gem 'mailcatcher'
+  gem 'capistrano'
+  gem 'rvm-capistrano'
 end
 
 gem 'jquery-rails'
@@ -42,8 +44,8 @@ end
 
 group :cucumber do
   gem 'cucumber-rails', :require => false
-  gem 'capybara', :github => 'jnicklas/capybara', :require => false
-  gem 'xpath', :github => 'jnicklas/xpath', :require => false
+  gem 'capybara', :require => false
+  gem 'xpath', :require => false
 end
 
 # To use ActiveModel has_secure_password

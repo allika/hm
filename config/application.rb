@@ -68,5 +68,7 @@ module Hm
         :authentication       => 'plain',
         :enable_starttls_auto => true
     }
+
+    config.action_mailer.smtp_settings = config.default_mail_settings
   end
 end

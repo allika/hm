@@ -58,5 +58,15 @@ module Hm
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+
+    config.default_mail_settings = {
+        :address              => "smtp.gmail.com",
+        :port                 => 587,
+        :domain               => 'localhost',
+        :user_name            => 'hm.epyfnm@gmail.com',
+        :password             => 'epyfnm123',
+        :authentication       => 'plain',
+        :enable_starttls_auto => true
+    }
   end
 end
